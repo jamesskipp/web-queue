@@ -1,0 +1,32 @@
+.queue-area-wrapper {
+  min-height: 610px;
+  position: relative;
+}
+
+.queue-area {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.process {
+  display: none;
+}
+
+.process-area-wrapper {
+  min-height: 445px;
+  position: relative;
+}
+
+.process-area {
+  bottom: 0;
+  left: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  width: 100%;
+}
+
+.list-group-item {
+  border-radius: 0;
+}
