@@ -4,9 +4,9 @@
 }
 
 .queue-area {
-  bottom: 0;
   position: absolute;
   width: 100%;
+  margin-top: 10px;
 }
 
 .process {
@@ -14,7 +14,7 @@
 }
 
 .process-area-wrapper {
-  min-height: 445px;
+  height: 470px;
   position: relative;
 }
 
@@ -29,4 +29,52 @@
 
 .list-group-item {
   border-radius: 0;
+}
+
+.form-group label {
+  text-align: right;
+  width: 70px;
+  padding: 10px;
+}
+
+.form-group input {
+  width: 100px!important;
+}
+
+.form-inline .btn {
+  margin-left: 20px;
+}
+
+.cpu-idle {
+  background-color: #D9534F;
+  color: white;
+}
+
+.cpu-active {
+  background-color: #5CB85C;
+  color: white;
+}
+
+.process-area-row {
+  height: 100%;
+}
+
+.process-area-col {
+  height: 100%;
+}
+
+.list-group {
+  margin-bottom: 0px;
+}
+
+.context-content {
+  font: times-new-roman;
+}
+
+.context-content h4 {
+  text-indent: 20px;
+}
+
+.context-content p {
+  margin-left: 40px;
 }

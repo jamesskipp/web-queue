@@ -5,64 +5,94 @@
     <link rel="stylesheet" href="../css/queue.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src= "../js/lib/lodash.min.js" type="text/javascript"></script>
 
     <script type="text/javascript" src="../js/queue.js"></script>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-sm-1">
         </div>
         <div class="col-sm-10 queue-area-wrapper">
           <div class="list-group queue-area">
             <div class="list-group-item process-area-wrapper">
-              <div class="list-group process-area">
-                <div class="list-group-item process" id="process-9">
-
+                <div class="row process-area-row">
+                  <div class="col-sm-6 process-area-col">
+                    <h4 class="text-center">Ready</h4>
+                    <div class="list-group process-area">
+                      <div class="list-group-item process" id="process-9"></div>
+                      <div class="list-group-item process" id="process-8"></div>
+                      <div class="list-group-item process" id="process-7"></div>
+                      <div class="list-group-item process" id="process-6"></div>
+                      <div class="list-group-item process" id="process-5"></div>
+                      <div class="list-group-item process" id="process-4"></div>
+                      <div class="list-group-item process" id="process-3"></div>
+                      <div class="list-group-item process" id="process-2"></div>
+                      <div class="list-group-item process" id="process-1"></div>
+                      <div class="list-group-item process" id="process-0"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 process-area-col">
+                    <h4 class="text-center">Blocked</h4>
+                    <div class="list-group process-area">
+                      <div class="list-group-item process" id="block-9"></div>
+                      <div class="list-group-item process" id="block-8"></div>
+                      <div class="list-group-item process" id="block-7"></div>
+                      <div class="list-group-item process" id="block-6"></div>
+                      <div class="list-group-item process" id="block-5"></div>
+                      <div class="list-group-item process" id="block-4"></div>
+                      <div class="list-group-item process" id="block-3"></div>
+                      <div class="list-group-item process" id="block-2"></div>
+                      <div class="list-group-item process" id="block-1"></div>
+                      <div class="list-group-item process" id="block-0"></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="list-group-item process" id="process-8">
-
-                </div>
-                <div class="list-group-item process" id="process-7">
-
-                </div>
-                <div class="list-group-item process" id="process-6">
-
-                </div>
-                <div class="list-group-item process" id="process-5">
-
-                </div>
-                <div class="list-group-item process" id="process-4">
-
-                </div>
-                <div class="list-group-item process" id="process-3">
-
-                </div>
-                <div class="list-group-item process" id="process-2">
-
-                </div>
-                <div class="list-group-item process" id="process-1">
-
-                </div>
-                <div class="list-group-item process" id="process-0">
-
+            </div>
+            <div class="list-group-item">
+              <div class="list-group" id="current-process-wrapper">
+                <div class="list-group-item cpu-idle" id="current-process">
+                  CPU IDLE
                 </div>
               </div>
             </div>
             <div class="list-group-item">
-              <div class="list-group" id="current-process-wrapper">
-                <div class="list-group-item" id="current-process">
-                  CPU IDLE
+              <form class="form-inline">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="name" class="form-control" value="" id="name">
                 </div>
-              </div>
-              <div class="btn btn-default" id="job-btn">
-                Add Process
-              </div>
+                <div class="form-group">
+                  <label for="priority">Priority:</label>
+                  <input type="priority" class="form-control" value="5" id="priority">
+                </div>
+                <div class="btn btn-primary" id="add-btn">
+                  <span>Add Process</span>
+                </div>
+                <div class="btn btn-danger" id="end-btn">
+                  <span>End Process</span>
+                </div>
+                <div class="btn btn-warning" id="block-btn">
+                  <span>Block Process</span>
+                </div>
+                <div class="btn btn-success" id="unblock-btn">
+                  <span>Unblock Process</span>
+                </div>
+              </form>
             </div>
           </div>
         </div>
         <div class="col-sm-1">
         </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+          <div class="list-group" id="context-list">
+          </div>
+        </div>
+        <div class="col-sm-1"></div>
       </div>
     </div>
   </body>
